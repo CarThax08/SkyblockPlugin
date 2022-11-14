@@ -19,7 +19,7 @@ public final class PluginMain extends JavaPlugin {
         saveDefaultConfig();
         HandlerManager.dbHandler = new DatabaseHandler(getConfig().getString("settings.database.type"), getConfig().getString("settings.database.url"), getConfig().getInt("settings.database.port"), getConfig().getString("settings.database.username"), getConfig().getString("settings.database.password"), getConfig().getString("settings.database.database"));
         DatabaseHandler handler = HandlerManager.dbHandler;
-        if (!handler.executeStatement("CREATE TABLE IF NOT EXISTS player-data")){
+        if (!handler.executeStatement("CREATE TABLE IF NOT EXISTS playerdata(uuid varchar(36), money bigint, islandID int, username varchar(16),  KEY(uuid))")){
             logger.severe("CRITICAL: FAILED TO CONNECT TO DATABASE! PLEASE FIX DATABASE CONFIG AND RESTART SERVER!");
             getServer().getPluginManager().disablePlugin(this);
         }
