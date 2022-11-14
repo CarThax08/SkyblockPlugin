@@ -1,0 +1,8 @@
+settings:
+  database:
+    type: 'mysql'
+    url: 'localhost'
+    database: 'skyblock'
+    port: 3306
+    username: 'admin'
+    password: 'password'

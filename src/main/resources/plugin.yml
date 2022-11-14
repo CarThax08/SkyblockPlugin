@@ -1,0 +1,6 @@
+name: SkyblockPlugin
+version: '${project.version}'
+main: com.github.carthax08.skyblockplugin.PluginMain
+prefix: Skyblock
+authors: [ CarThax ]
+description: A simple skyblock plugin I made because I got bored
